@@ -1,0 +1,13 @@
+/*
+
+!/.gitignore
+!/.gitattributes
+!/.clang-format
+
+!/*.bat
+!/*.md
+
+!/*.sln
+!/*.vcxproj
+
+!/src

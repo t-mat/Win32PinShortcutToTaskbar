@@ -1,0 +1,35 @@
+﻿---
+BasedOnStyle:  LLVM
+ColumnLimit: 120
+IndentWidth: 4
+
+# '{' 出現時の改行スタイル
+BreakBeforeBraces: Linux
+
+# 連続した宣言、代入について、名前が同じ桁になるようにする
+AlignConsecutiveDeclarations: true
+AlignConsecutiveAssignments: true
+
+# 関数のパラメータの改行
+# false : パラメータ毎に改行する
+BinPackParameters: false
+
+BinPackArguments: false
+NamespaceIndentation: All
+AlignConsecutiveMacros: true
+AllowAllArgumentsOnNextLine : false
+AllowAllParametersOfDeclarationOnNextLine : false
+AlignAfterOpenBracket: Align
+
+# ネストされたプリプロセッサディレクティブにインデントを付ける
+# AfterHash : '#' の後にスペースを入れて、字下げする
+IndentPPDirectives: AfterHash
+
+# プリプロセッサ命令のインデント幅
+PPIndentWidth: 2
+
+# 短い関数をワンライナーにしない
+AllowShortFunctionsOnASingleLine: Empty
+
+# #include の順序を変更しない
+SortIncludes: false
