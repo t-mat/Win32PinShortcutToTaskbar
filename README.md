@@ -12,8 +12,17 @@ For details, take a look at the following article:
 
 ## Demo
 
-Invoke `.\run.bat`.  
-It will build and run `.\x64\Release\Win32PinShortcutToTaskbar.exe`.  The executable file pins (adds) itself to your taskbar.
+You can clone, build and run this repo with the following commands.
+
+```
+pushd "%USERPROFILE%\Documents"
+git clone https://github.com/t-mat/Win32PinShortcutToTaskbar.git
+cd Win32PinShortcutToTaskbar
+.\run.bat
+```
+
+It will build and run `.\x64\Release\Win32PinShortcutToTaskbar.exe`.  
+The executable file pins (adds) itself to your taskbar.
 
 
 ## Use it as a library
