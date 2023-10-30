@@ -1,6 +1,6 @@
 @rem Find and build all *.sln file in current directory
-@setlocal enabledelayedexpansion
 @echo off
+setlocal enabledelayedexpansion
 set /a errorno=1
 for /F "delims=#" %%E in ('"prompt #$E# & for %%E in (1) do rem"') do set "esc=%%E"
 
@@ -32,11 +32,8 @@ if "%InstallDir%" == "" (
 call "%InstallDir%\VC\Auxiliary\Build\vcvars64.bat" || goto :ERROR
 
 
-rem Build all *.sln files by msbuild for x64 with release configuration.
-rem
 rem https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
 
-set /a buildcnt=0
 for %%i in (*.sln) do (
   echo msbuild "%%i"
   msbuild "%%i" ^
@@ -47,11 +44,6 @@ for %%i in (*.sln) do (
           /p:Platform=x64 ^
           /t:Clean,Build ^
           || goto :ERROR
-  set /a buildcnt=%buildcnt%+1
-)
-if "%buildcnt%"=="0" (
-  echo There is no Visual Studio solution ^(^.sln^) file.
-  goto :ERROR
 )
 echo Build Status -%esc%[92m SUCCEEDED %esc%[0m
 set /a errorno=0

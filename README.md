@@ -4,7 +4,7 @@ For details, take a look at the following article:
 [Microsoft Edge (Chromium) sets a bad and good example: the case of Taskbar pinning](https://geelaw.blog/entries/msedge-pins/)
 
 
-## Prerequisite
+## Prerequisites
 
 - Windows 10/11
 - Visual C++ 2022
@@ -12,7 +12,7 @@ For details, take a look at the following article:
 
 ## Demo
 
-You can clone, build and run this repo with the following commands.
+You can clone, build, and run this repo with the following commands:
 
 ```
 pushd "%USERPROFILE%\Documents"
@@ -28,4 +28,4 @@ The executable file pins (adds) itself to your taskbar.
 ## Use it as a library
 
 You can use `src/Win32PinShortcutToTaskbar.hpp` as a single header library.  
-Do not forget to initialize COM before using it.  See `src/main.cpp` for actual example.
+Do not forget to initialize COM before using it.  See `src/main.cpp` for an actual example.
